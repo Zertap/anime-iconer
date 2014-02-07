@@ -12,8 +12,9 @@ for root, dirnames, filenames in os.walk('./'):
 		fulldirname = os.path.join(root, dirname)
 		if "folder.ico" not in os.listdir(fulldirname):
 			print "folder.ico not found in " + fulldirname
-			#TODO --> Create the icon file if not found!
+			"""TODO --> Create the icon file if not found!"""
 		else:
 			print 'folder.ico found at: ' + fulldirname + '\n Setting it as the icon...'
 			updateicon.seticon(fulldirname, fulldirname + '\\folder.ico', 0)
-			#TODO --> Update Desktop.ini to not use full path of the icon.
+			"""TODO --> Update Desktop.ini to not use full path of the icon."""
+
