@@ -1,7 +1,7 @@
-"""AnimeIconer
-A tool to change windows folder icon(by using Desktop.ini) to a cover of the corresponding series.
-Written by zertap"""
-####CURRENTLY YOU NEED TO MANUALLY DOWNLOAD, CONVERT TO .ico AND PLACE THE COVER INTO AN ANIME FOLDER####
+"""
+FolderIconer
+A tool to change windows folder icon(by using Desktop.ini) to a custom icon (like a cover of a serie within the folder).
+"""
 import os
 import fnmatch
 import updateicon
@@ -12,7 +12,7 @@ for root, dirnames, filenames in os.walk('./'):
 		fulldirname = os.path.join(root, dirname)
 		if "folder.ico" not in os.listdir(fulldirname):
 			print "folder.ico not found in " + fulldirname
-			#TODO --> Create the icon file if not found!
+			#TODO --> Create the icon file from another format if not found!
 		else:
 			print 'folder.ico found at: ' + fulldirname + '\n Setting it as the icon...'
 			updateicon.seticon(fulldirname, fulldirname + '\\folder.ico', 0)
